@@ -98,7 +98,10 @@ WYSIWYG(What You See Is What You Get : 네가 보는 것이 얻는 것이다.)
 엔터티 코드 : 대체코드 
 - 특수문자(예약어)를 직접 사용하지 못할 때 대체해서 사용하는 코드
 ```
-- 수평선(가로선) : h(orizontal) r(ule) 태그 <hr>
+- 수평선(가로선) : h(orizontal) r(ule) 태그 
+```
+<hr>
+```
   - 단락을 구분하는 구분선
   - 빈 요소
 
