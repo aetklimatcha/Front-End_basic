@@ -53,15 +53,15 @@
     <p>단락</p>
   </body>
 </html>
-
-* html 기준
-- 자식요소 : body
-- 자손요소 : h1, p
-* body 기준
-- 조상요소 : X
-- 부모요소 : html
-- 자식요소 : h1, p
-- 자손요소 : X
 ```
+
+- html 기준
+  - 자식요소 : body
+  - 자손요소 : h1, p
+- body 기준
+  - 조상요소 : X
+  - 부모요소 : html
+  - 자식요소 : h1, p
+  - 자손요소 : X
 
 ## Text Contents Markup
