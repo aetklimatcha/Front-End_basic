@@ -98,5 +98,21 @@ WYSIWYG(What You See Is What You Get : 네가 보는 것이 얻는 것이다.)
 엔터티 코드 : 대체코드 
 - 특수문자(예약어)를 직접 사용하지 못할 때 대체해서 사용하는 코드
 ```
-- 가로선(수평선) : h(orizontal) r(ule) 태그 <hr>
+- 수평선(가로선) : h(orizontal) r(ule) 태그 <hr>
   - 단락을 구분하는 구분선
+  - 빈 요소
+
+*- 글자 크기 : 전체 내용을 보고 정하기 (가장 큰 제목이니 1)*
+*- hr : 단락을 구분해주는 의미 /빈 요소*
+*-제목이나 단락 중 애매하면 나름의 기준으로 세워보기/위키백과 -> 부제목의 역할*
+**- Ctrl + / : 줄 단위 주석처리 (만들고 해제를 지속할 수 있음)**
+
+### HTML Link
+- a(nchor) : 하이퍼링크 연결 태그 (link로 연결된 곳에서 멈춰있다.)
+- href(hypertext reference(참조)) : 목적지 정보 제공 속성(attribute)
+```
+<a href="url">텍스트</a>
+```
+-_blank : 새 탭 열기
+
+- URL (Uniform(한결같은) Resource Locator) : 파일위치식별자
