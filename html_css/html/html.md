@@ -284,3 +284,16 @@ https://developers.google.com/youtube/player_parameters?hl=ko#autoplay
 - figure
   - embeded contents 또는 그림 형태의 콘텐츠를 grouping하는 요소
 
+head 태그 요소, 비트계산 - ip, 문자표시, 색표시
+
+## Block & Inline
+- 구역을 구분하는 Semantic Element, Container Element 뿐만 아니라 Contents를 표현하는 Element도 화면에 **영역**으로 표시됨.
+
+### Block Element
+- 요소의 영역이 부모요소를 기준으로 가능한 최대 너비로 채워짐
+- 요소와 요소는 줄바꿈되어 새 줄에 표시됨 (너비가 채워져서)
+
+# Inline Element
+- 요소의 영역이 Contents 또는 자식요소를 기준으로 맞춰짐
+- 요소와 요소는 한 줄에 나란히 표시가 됨
+
