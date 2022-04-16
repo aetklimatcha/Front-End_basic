@@ -238,6 +238,15 @@ https://developers.google.com/youtube/player_parameters?hl=ko#autoplay
 ```
 <iframe src="youtube_url?parameter_1=0&parameter_2=1&parameter_3=0"></iframe>
 ```
+### 콘텐츠 강조
+- 제목의 역할까지는 아니지만 중요, 강조 의미를 가진 텍스트 표시 
+  - em(pasized)
+  - strong
+  - mark
+  ```
+  strong > mark > em(phasized)
+  => 기본 서식때문에
+  ```
 
 ## HTML Structure
 
