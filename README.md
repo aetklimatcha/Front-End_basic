@@ -59,3 +59,13 @@
     - 앱 개발 언어(Native)
       - Android : Java -> Kotlin
       - IOS : Objective C -> Swift
+
+# 비트 계산
+- ip 주소, 문자 표시, Color 표시
+ 
+- bit : 컴퓨터가 표시할 수 있는 최소 단위
+  - 1bit에 0 또는 1 숫자를 저장할 수 있음(2진수 : 0, 1)
+  - 1bit로 의미를 부여할 수 있는 개수 : 2개
+
+- byte : 의미있는 데이터를 표현하는 단위(=8bit)
+  - 1byte로 의미를 부여할 수 있는 개수 : 2^8=256  
