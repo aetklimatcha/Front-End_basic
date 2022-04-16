@@ -341,5 +341,12 @@ head 태그 요소, 비트계산 - ip, 문자표시, 색표시
 
 ### Inline Element
 - 요소의 영역이 Contents 또는 자식요소를 기준으로 맞춰짐
-- 요소와 요소는 한 줄에 나란히 표시가 됨
+- 요소와 요소는 한 줄에 나란히 표시가 됨]
+
+## head 태그
+- meta : 웹사이트 추강
+-title 
+- link, script
+- title script : 파일 불러올때 사용
+- style, script. css, js : 코드를 직업 사용할 떄 사용
 
