@@ -240,13 +240,16 @@ https://developers.google.com/youtube/player_parameters?hl=ko#autoplay
 ```
 ### 콘텐츠 강조
 - 제목의 역할까지는 아니지만 중요, 강조 의미를 가진 텍스트 표시 
-  - em(pasized)
-  - strong
-  - mark
+  - em(pasized) : 기울임
+  - strong : 굵게
+  - mark : 형광펜
   ```
   strong > mark > em(phasized)
-  => 기본 서식때문에
+  => 기본 서식에 따른 우선 순위
   ```
+### 그 밖의 Text Element
+- b(old) : 굵게
+- i(talic) : 기울임
 
 ## HTML Structure
 
