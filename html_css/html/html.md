@@ -284,6 +284,52 @@ https://developers.google.com/youtube/player_parameters?hl=ko#autoplay
 - figure
   - embeded contents 또는 그림 형태의 콘텐츠를 grouping하는 요소
 
+### Container Element
+
+- 단순 구역 나누는 / grouping 하는 요소
+- div(ision)
+- span
+
+## 파일 경로 표시 방식
+
+- 절대 경로(주소) 방식
+  - 항상 똑같은 경로(주소) 표시 가능
+  - 주소 표시 방식이 복잡함
+```
+href="www.naver.com/html/home.html"
+src="www.instagram.com/html/photo.jpg"
+```
+
+- 상대 경로 방식
+  - 출발 위치 기준에 따라서 상대적으로 경로(주소) 표시 형태가 변경
+  - 같은 자원의 위치에 대해서 표시 방식이 너무 많음
+  - 자원의 위치가 이동하면 주소를 모두 수정해야함
+  - ../ : 한 단계 상위 폴더로 이동
+```
+/ - html - home.html
+         - sub.html
+  - images - photo.jpg
+
+위치 기준 : sub.html
+
+href="home.html"
+src="../images/photo.jpg"
+```
+
+- root 상대 경로 방식
+  - root : 최상위 경로(/)
+  - root 경로에서 부터 찾아갈 수 있도록 상대 경로 방식을 변형
+```
+/ - html - home.html
+         - sub.html
+  - images - photo.jpg
+
+위치 기준 : sub.html
+
+href="/html/home.html"
+src="/images/photo.jpg"
+```
+
 head 태그 요소, 비트계산 - ip, 문자표시, 색표시
 
 ## Block & Inline
@@ -293,7 +339,7 @@ head 태그 요소, 비트계산 - ip, 문자표시, 색표시
 - 요소의 영역이 부모요소를 기준으로 가능한 최대 너비로 채워짐
 - 요소와 요소는 줄바꿈되어 새 줄에 표시됨 (너비가 채워져서)
 
-# Inline Element
+### Inline Element
 - 요소의 영역이 Contents 또는 자식요소를 기준으로 맞춰짐
 - 요소와 요소는 한 줄에 나란히 표시가 됨
 
