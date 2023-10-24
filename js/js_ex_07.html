@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>DOM 객체</h1>
+  <p></p>
+  <div>내용 삭제</div>
+  <a href="http://www.naver.com">네이버</a>
+
+  <script>
+    let heading = document.querySelector('h1');
+    
+    // CRUD
+    // Create
+    let createDiv = document.createElement('div');
+    let parent = document.querySelector('body');
+
+    createDiv.innerHTML = '생성된 요소';
+    // console.log(createDiv);
+    parent.appendChild(createDiv);
+
+    // Read출력
+    // console.log(heading);
+    let paragraph = document.querySelector('p');
+    paragraph.innerHTML = heading.innerHTML;
+
+    // Update
+    heading.innerHTML = 'DOM 내용 변경';
+
+    // Delete
+    let deleteText = document.querySelector('div');
+    
+    // deleteText.innerHTML = '';
+    parent.removeChild(deleteText);
+
+    // attribute 변경
+    let anchor = document.querySelector('a');
+    anchor.setAttribute('href', 'www.daum.net');
+
+    // css property 변경
+    heading.style.color = 'red';
+
+  </script>
+</body>
+</html>

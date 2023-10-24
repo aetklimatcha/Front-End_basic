@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 배열 입출력(CRUD)
+
+      // 생성(Create)
+      const cars = ['a', 'b', 'c'];
+
+      // 출력(Read)
+      // 배열 전체 접근 - Array Full Access
+      console.log(cars);
+      // 배열 원소 접근 - Array Element Access
+      for (let i = 0; i < cars.length; i++) {
+        console.log(cars[i]);
+      }
+
+      // 갱신(Update)
+      cars[1] = 'd';
+      console.log(cars);
+      // cars = ['x', 'y', 'z'];
+
+      // 원소 삭제
+      cars.pop(); // 배열데이터의 가장 마지막 원소 삭제
+      console.log(cars);
+
+      // 원소 추가
+      cars.push('e'); // 배열 끝에 새로운 원소 추가
+      console.log(cars);
+
+      // 객체 데이터 입출력
+
+      // 생성(Create)
+      const carInfo = {
+        company: 'Fiat',
+        color: 'white',
+        showColor: function(){
+          console.log('color : ' + this.color);
+        }
+      }
+
+      // 출력(Read)
+      console.log(carInfo);
+      console.log(carInfo.company);
+      console.log(carInfo.color);
+      
+      // 갱신(Update)
+      carInfo.color = 'red';
+      console.log(carInfo);
+      // carInfo = {
+      //   company:'BMW',
+      //   color:'blue'
+      // }
+
+      // 원소 삭제(Delete)
+      delete carInfo.company;
+      console.log(carInfo);
+
+      // 원소 추가
+      carInfo.model = '500';
+      console.log(carInfo);
+
+      // 메소드 사용
+      carInfo.showColor();
+
+    </script>
+  </head>
+  <body>
+    <h1>배열/객체/class</h1>
+  </body>
+</html>

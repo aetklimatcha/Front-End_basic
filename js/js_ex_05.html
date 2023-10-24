@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // 함수 선언
+    function loopStatement(number){
+      let dan = 0;
+      for(let i=1;i<=9;i++){
+        dan = number * i;
+        console.log(number + ' * ' + i + ' = ' + dan);
+      }
+    }
+
+    // 함수 호출
+    loopStatement(2);
+    loopStatement(3);
+
+    function print(number){
+      console.log('Hello World' + number);
+    }
+
+    print(1);
+    print(2);
+
+    // return
+    function print2(number){
+      let string = '';
+      string = 'World' + number;
+
+      return string;
+    }
+
+    // 함수 호출
+    console.log( 'Hello' + print2(5) );
+  </script>
+</head>
+<body>
+  <h1>함수</h1>
+</body>
+</html>

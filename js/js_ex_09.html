@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+      */
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      h1{
+        font-size:30px;
+        font-weight:bold;
+        border-bottom:1px solid #000;
+        padding-bottom:20px;
+        margin-bottom:50px;
+      }
+
+      .data{
+        border:1px solid #000;
+        padding:20px;
+        width:300px;
+      }
+
+      .data-item{
+        border:1px solid skyblue;
+        font-size:20px;
+        padding:10px;
+        margin:20px 0;
+        display:flex;
+      }
+
+      .data-number{
+        margin-right:10px;
+      }
+
+      .form-group{
+        border:1px solid #000;
+        padding:20px;
+        width:300px;
+      }
+
+      .form-group>div{
+        margin:20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CRUD 기능 구현 예제</h1>
+
+    <ol class="data">
+      <li class="data-item">
+        <span class="data-number">1</span>
+        <span class="data-content">HTML</span>
+      </li>
+      <li class="data-item">
+        <span class="data-number">2</span>
+        <span class="data-content">CSS</span>
+      </li>
+      <li class="data-item">
+        <span class="data-number">3</span>
+        <span class="data-content">Javascript</span>
+      </li>
+    </ol>
+
+    <div class="form-group">
+      <!-- Create : 추가 -->
+      <div>
+        <input type="text" class="create-text" />
+        <button type="button" class="create-btn">추가</button>
+      </div>
+
+      <!-- Read : 표시 -->
+      <div>
+        <input type="text" class="read-number" />
+        <input type="text" class="read-content" />
+        <button type="button" class="read-btn">표시</button>
+      </div>
+
+      <!-- Update : 수정,갱신 -->
+      <div>
+        <input type="text" class="update-number" />
+        <input type="text" class="update-content" />
+        <button type="button" class="update-btn">수정</button>
+      </div>
+
+      <!-- Delete : 삭제 -->
+      <div>
+        <input type="text" class="delete-number" />
+        <button type="button" class="delete-btn">삭제</button>
+      </div>
+    </div>
+
+    <script>
+      // 기본 Access
+      let data = document.querySelector('.data');
+      
+      // Create
+      
+      // button Access
+      let createBtn = document.querySelector('.create-btn');
+
+      // button을 클릭했을때 => 이벤트
+      // 이벤트 감지(리스닝) 메소드
+      // addEventListener(이벤트, 핸들러함수)
+      createBtn.addEventListener('click', function(){
+        // 입력된 내용 Access
+        let createText = document.querySelector('.create-text').value;
+        // 목록 아이템
+        let dataItem = document.querySelectorAll('.data-item');
+
+        let listItem = document.createElement('li'); // <li></li>
+        // html 요소에 class 이름 추가
+        listItem.classList.add('data-item'); // <li class="data-item"></li>
+
+        let dataNumber = document.createElement('span'); // <span></span>
+        dataNumber.classList.add('data-number'); // <span class="data-number"></span>
+        dataNumber.innerHTML = dataItem.length + 1; // <span class="data-number">4</span>
+
+        let dataContent = document.createElement('span'); // <span></span>
+        dataContent.classList.add('data-content'); // <span class="data-content"></span>
+        dataContent.innerHTML = createText; // <span class="data-content">인풋내용</span>
+
+        // appendChild() : 마지막에 추가
+        listItem.appendChild(dataNumber);
+        listItem.appendChild(dataContent);
+        /*
+          <li class="data-item">
+            <span class="data-number">4</span>
+            <span class="data-content">인풋내용</span>
+          </li>
+        */
+
+        data.appendChild(listItem); // 목록에 추가해서 웹 페이지 화면에 표시
+      });
+
+      // Read
+      let readBtn = document.querySelector('.read-btn');
+      readBtn.addEventListener('click', function(){
+
+        let readNumber = document.querySelector('.read-number').value;
+        let readContent = document.querySelector('.read-content');
+        let dataItem = document.querySelectorAll('.data-item');
+
+        // 객체 property name이 숫자로 되어있는 경우 []를 사용해서 값을 표시
+        // 입력한 숫자번째 목록 항목에서 텍스트 값을 추출
+        let readData = dataItem[readNumber-1].querySelector('.data-content').innerHTML;
+        
+        // 인풋박스에 텍스트 표시
+        readContent.value = readData;
+      });
+
+      // Update
+      let updateBtn = document.querySelector('.update-btn');
+      updateBtn.addEventListener('click', function(){
+
+        let updateNumber = document.querySelector('.update-number').value;
+        let updateContent = document.querySelector('.update-content').value;
+        let dataItem = document.querySelectorAll('.data-item');
+
+        dataItem[updateNumber-1].querySelector('.data-content').innerHTML = updateContent;
+
+      });
+
+      // Delete
+      let deleteBtn = document.querySelector('.delete-btn');
+      deleteBtn.addEventListener('click', function(){
+
+        let deleteNumber = document.querySelector('.delete-number').value;
+        let dataItem = document.querySelectorAll('.data-item');
+
+        data.removeChild(dataItem[deleteNumber-1]);
+      });
+
+    </script>
+  </body>
+</html>

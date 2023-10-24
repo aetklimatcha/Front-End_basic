@@ -1,0 +1,445 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  /* line-height: 1; */
+  font-family: "Noto Sans KR", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Nunito Sans', sans-serif; */
+
+/* custom css */
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 100px;
+}
+
+.gnb {
+  padding-top: 7px;
+}
+
+.gnb-list {
+  display: flex;
+}
+
+.gnb-list-item {
+  margin-left: 30px;
+}
+
+.gnb-list-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gnb-list-link:hover {
+  color: #10c9c3;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+.section1 {
+  height: 320px;
+  background: #f6f6f6;
+  text-align: center;
+  position: relative;
+  overflow:hidden;
+}
+
+.visual-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding-top: 95px;
+}
+
+.visual-item.current {
+  left: 0;
+  transition:left 1s;
+}
+
+.visual-item.next {
+  left: 100%;
+}
+
+.visual-item.prev {
+  left: -100%;
+  transition:left 1s;
+}
+
+.section-heading {
+  font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.section-paragraph {
+  width: 500px;
+  margin: auto;
+}
+
+.tab{
+  display:flex;
+  justify-content:center;
+  margin:30px 0;
+}
+
+.tab-item{
+  border:1px solid #aaa;
+  padding:10px;
+}
+
+.tab-item.active{
+  color:#10c9c3;
+}
+
+.visual-area {
+  width: 340px;
+  height: 300px;
+  overflow: hidden;
+}
+
+/*
+  .group>.visual-area>img{}
+  .group img{}
+*/
+
+.visual-area > img,
+.visual-area > video,
+.visual-area > iframe {
+  height: 300px;
+}
+
+.group {
+  /* display: flex; */
+  justify-content: center;
+  display:none;
+}
+
+.group.active{
+  display:flex;
+}
+
+.footer {
+  height: 280px;
+  background: #141414;
+  color: #bcbcbc;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 100px 0;
+}
+
+.footer mark {
+  background: none;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.footer em {
+  display: block;
+}
+
+.footer address div {
+  margin-bottom: 15px;
+}
+
+.footer ul > li {
+  margin-bottom: 10px;
+}
+
+.footer ul > li > a {
+  color: #bcbcbc;
+}
+
+/* about page */
+
+.about-bg {
+  background: url(/project/resources/bg_section_01.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top:95px;
+}
+
+.section-heading.white,
+.section-paragraph.white {
+  color: #ffffff;
+}
+
+.section-icon {
+  background: #10c9c3;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-list {
+  margin: 0 35px;
+  color: #fff; /* #ff3399 => #f39 */
+  padding-left: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.icon-list > dt {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.icon-list.icon1 {
+  background: url(/project/resources/icon_01.png) no-repeat left center;
+}
+
+.icon-list.icon2 {
+  background: url(/project/resources/icon_02.png) no-repeat left center;
+}
+
+.icon-list.icon3 {
+  background: url(/project/resources/icon_03.png) no-repeat left center;
+}
+
+.icon-list.icon4 {
+  background: url(/project/resources/icon_04.png) no-repeat left center;
+}
+
+.section-about {
+  height: 570px;
+  padding-left: 770px;
+  padding-top: 140px;
+  background: #e3ded8 url(/project/resources/bg_section_02.jpg) no-repeat;
+  background-size: contain;
+}
+
+.section-heading.font30 {
+  font-size: 30px;
+}
+
+.section-paragraph.no-margin {
+  margin: 0;
+}
+
+.section-contact {
+  height: 400px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.link-contact {
+  display: block;
+  width: 180px;
+  height: 55px;
+  background: #10c9c3;
+  color: #ffffff;
+  margin: 50px auto 0;
+  line-height: 55px;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  .group {
+    flex-wrap: wrap;
+    width: 680px;
+    margin: auto;
+  }
+}
+
+/* smart phone */
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 20px;
+    height: 66px;
+  }
+
+  .gnb {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    display: none;
+    z-index:900;
+  }
+
+  .gnb.on {
+    display: block;
+  }
+
+  .gnb-list {
+    display: block;
+  }
+
+  .gnb-list-item {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .mobile-btn {
+    display: block;
+    width: 31px;
+    height: 25px;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .mobile-btn > img {
+    width: 31px;
+    height: 25px;
+  }
+
+  /* home */
+  .group {
+    width: 340px;
+  }
+
+  /* about */
+  .section-icon {
+    flex-wrap: wrap;
+  }
+  .icon-list {
+    width: 200px;
+    margin: 10px 0;
+  }
+}
